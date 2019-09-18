@@ -23,7 +23,7 @@ class TCP_Client extends Frame implements ActionListener, WindowListener {
     }
     private void GUI() {
 // super("Клиент");
-        setTitle("КЛИЕНТ");
+        setTitle("TCP Client");
         tf = new TextField("127.0.0.1");//ip adress клиента
         tf1 = new TextField("1024");// port клиента
         tf2 = new TextField();
@@ -46,7 +46,7 @@ class TCP_Client extends Frame implements ActionListener, WindowListener {
         tf4.setBounds(270, 200, 50, 25);
         tf5.setBounds(330, 200, 50, 25);
         tf6.setBounds(390, 200, 50, 25);
-        ta.setBounds(150, 300, 150, 100);
+        ta.setBounds(100, 300, 400, 250);
         btn.setBounds(50, 50, 70, 25);
         btn1.setBounds(50, 200, 70, 25);
         la.setBounds(130, 50, 150, 25);
@@ -112,8 +112,8 @@ class TCP_Client extends Frame implements ActionListener, WindowListener {
             byte[] bytes = new byte[1024];
             is.read(bytes); //получаем назад информацию,которую послал сервер
             String str = new String(bytes, "UTF-8"); // переводим тип byte в String
-            String[] n = str.split(" "); // разбиваем строку на подстроки пробелами
-            for (int i = 0; i < n.length - 1; i++) {
+            String[] n = str.split("_"); // разбиваем строку на подстроки пробелами
+            for (int i = 0; i < n.length; i++) {
                 ta.append(n[i] + "\n"); // в text area записываем полученные данные
             }
         } catch (Exception ex) {
