@@ -20,7 +20,7 @@ public class UDP_Client {
         }
         dp=new DatagramPacket(buf,100);
         st.receive(dp);
-        System.out.println("the answer is "+new String(dp.getData()));
+        System.out.println("the answer is "+ new String(dp.getData()));
         st.close();
     }
 }

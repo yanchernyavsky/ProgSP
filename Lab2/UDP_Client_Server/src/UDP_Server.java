@@ -1,6 +1,7 @@
 import java.io.IOException;
 import java.io.*;
 import java.net.*;
+import java.math.*;
 public  class UDP_Server
 {
     public static void main(String[] args) throws IOException, InterruptedException, SocketException {
@@ -21,25 +22,25 @@ public  class UDP_Server
         st.receive(dp);
         String str=new String(dp.getData());
         str=str.substring(0, str.indexOf('\n'));
-        System.out.println("number "+str+" recieved as a");
+        System.out.println("number "+str+" received as a");
         a=Integer.parseInt(str);
         st.receive(dp);
         str=new String(dp.getData());
         str=str.substring(0, str.indexOf('\n'));
-        System.out.println("number "+str+" recieved as b");
+        System.out.println("number "+str+" received as b");
         b=Integer.parseInt(str);
         st.receive(dp);
         str=new String(dp.getData());
         str=str.substring(0, str.indexOf('\n'));
-        System.out.println("number "+str+" recieved as c");
+        System.out.println("number "+str+" received as c");
         c=Integer.parseInt(str);
         Thread t1=new Thread(new Runnable()
         {
             public void run()
             {
-                for(int i=a;i<b;i++)
+                for(int i=a;i<=b;i++)
                 {
-                    sum1+=(i-1)*(i-1);
+                    sum1+=(3.0*i)/(2.0*i+1);
                 }
             }
         })
@@ -47,9 +48,9 @@ public  class UDP_Server
         {
             public void run()
             {
-                for(int i=b;i<c;i++)
+                for(int i=b;i<=c;i++)
                 {
-                    sum1+=2*i/(7*i+1);
+                    sum2+= Math.pow(i,2)+4.0*i+1.0;
                 }
             }
         });
@@ -61,7 +62,7 @@ public  class UDP_Server
     }
     private void sendBack() throws IOException
     {
-        String str=String.valueOf(sum1-sum2);
+        String str=String.valueOf(sum1+sum2);
         byte [] send=str.getBytes();
         dp=new DatagramPacket(send, send.length, InetAddress.getByName("localhost"),12346 );
         st.send(dp);
