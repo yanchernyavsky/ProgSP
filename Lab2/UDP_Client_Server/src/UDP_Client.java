@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class UDP_Client {
     public static void main(String[] args) throws IOException, IOException {
-        DatagramSocket st=new DatagramSocket(12346);
+        DatagramSocket st=new DatagramSocket();
         DatagramPacket dp = null;
         InetAddress loc=InetAddress.getByName("localhost");
         byte [] buf=new byte[100];
@@ -20,7 +20,7 @@ public class UDP_Client {
         }
         dp=new DatagramPacket(buf,100);
         st.receive(dp);
-        System.out.println("the answer is "+ new String(dp.getData()));
+        System.out.println("Ответ: "+ new String(dp.getData()));
         st.close();
     }
 }

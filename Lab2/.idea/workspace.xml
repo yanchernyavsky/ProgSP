@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="52bb57e3-d8a7-47d2-8366-5e1d59bd9b50" name="Default Changelist" comment="" />
+    <list default="true" id="52bb57e3-d8a7-47d2-8366-5e1d59bd9b50" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../Lab1/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab1/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab1/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UDP_Client_Server/out/production/UDP_Client_Server/UDP_Client.class" beforeDir="false" afterPath="$PROJECT_DIR$/UDP_Client_Server/out/production/UDP_Client_Server/UDP_Client.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UDP_Client_Server/out/production/UDP_Client_Server/UDP_Server.class" beforeDir="false" afterPath="$PROJECT_DIR$/UDP_Client_Server/out/production/UDP_Client_Server/UDP_Server.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UDP_Client_Server/src/UDP_Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/UDP_Client_Server/src/UDP_Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UDP_Client_Server/src/UDP_Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/UDP_Client_Server/src/UDP_Server.java" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,7 +54,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>

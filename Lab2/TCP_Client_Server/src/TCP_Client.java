@@ -1,15 +1,14 @@
-
-import java.awt.Button;
-import java.awt.Frame;
-import java.awt.Label;
-import java.awt.TextArea;
-import java.awt.TextField;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowEvent;
 import java.awt.event.WindowListener;
-import java.io.*;
-import java.net.*;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
+import java.net.InetAddress;
+import java.net.Socket;
+import java.net.UnknownHostException;
 class TCP_Client extends Frame implements ActionListener, WindowListener {
     TextField tf, tf1, tf2, tf3, tf4, tf5, tf6;
     TextArea ta;
@@ -21,6 +20,18 @@ class TCP_Client extends Frame implements ActionListener, WindowListener {
         TCP_Client c = new TCP_Client();
         c.GUI();
     }
+
+    public TCP_Client()
+    {
+        super();
+        try {
+            sock = new Socket(InetAddress.getByName("localhost"), 1024);
+            //создается сокет по ip адрессу и порту
+        } catch (NumberFormatException e) {
+        } catch (UnknownHostException e) {
+        } catch (IOException e) {
+        } }
+
     private void GUI() {
 // super("Клиент");
         setTitle("TCP Client");
@@ -37,7 +48,7 @@ class TCP_Client extends Frame implements ActionListener, WindowListener {
         la2 = new Label("sending date");
         la3 = new Label("result ");
         la4 = new Label(" ");
-        Button btn = new Button("connect ");
+        //Button btn = new Button("connect ");
         Button btn1 = new Button("send ");
         tf.setBounds(200, 50, 70, 25);
         tf1.setBounds(330, 50, 70, 25);
@@ -47,7 +58,7 @@ class TCP_Client extends Frame implements ActionListener, WindowListener {
         tf5.setBounds(330, 200, 50, 25);
         tf6.setBounds(390, 200, 50, 25);
         ta.setBounds(100, 300, 400, 250);
-        btn.setBounds(50, 50, 70, 25);
+        //btn.setBounds(50, 50, 70, 25);
         btn1.setBounds(50, 200, 70, 25);
         la.setBounds(130, 50, 150, 25);
         la1.setBounds(280, 50, 150, 25);
@@ -61,7 +72,7 @@ class TCP_Client extends Frame implements ActionListener, WindowListener {
         add(tf4);
         add(tf5);
         add(tf6);
-        add(btn);
+        //add(btn);
         add(btn1);
         add(ta);
         add(la);
@@ -72,7 +83,7 @@ class TCP_Client extends Frame implements ActionListener, WindowListener {
         setSize(600, 600);
         setVisible(true);
         addWindowListener(this);
-        btn.addActionListener(al);
+        //btn.addActionListener(al);
         btn1.addActionListener(this);
         tf2.getText();
         tf3.getText();

@@ -22,17 +22,17 @@ public  class UDP_Server
         st.receive(dp);
         String str=new String(dp.getData());
         str=str.substring(0, str.indexOf('\n'));
-        System.out.println("number "+str+" received as a");
+        System.out.println("Число "+str+" принято как A");
         a=Integer.parseInt(str);
         st.receive(dp);
         str=new String(dp.getData());
         str=str.substring(0, str.indexOf('\n'));
-        System.out.println("number "+str+" received as b");
+        System.out.println("Число "+str+" принято как B");
         b=Integer.parseInt(str);
         st.receive(dp);
         str=new String(dp.getData());
         str=str.substring(0, str.indexOf('\n'));
-        System.out.println("number "+str+" received as c");
+        System.out.println("Число "+str+" принято как C");
         c=Integer.parseInt(str);
         Thread t1=new Thread(new Runnable()
         {
@@ -58,13 +58,13 @@ public  class UDP_Server
         t2.start();
         t1.join();
         t2.join();
-        sendBack();
+        sendBack(dp);
     }
-    private void sendBack() throws IOException
+    private void sendBack(DatagramPacket d) throws IOException
     {
         String str=String.valueOf(sum1+sum2);
         byte [] send=str.getBytes();
-        dp=new DatagramPacket(send, send.length, InetAddress.getByName("localhost"),12346 );
+        dp=new DatagramPacket(send, send.length, d.getAddress(),d.getPort() );
         st.send(dp);
         st.close();
     }
