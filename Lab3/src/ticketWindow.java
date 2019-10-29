@@ -23,18 +23,16 @@ public class ticketWindow extends Thread
             long tempTime = System.currentTimeMillis();
             while(currentClientsAmount.am > 0)
             {
-                long temp = System.currentTimeMillis();
-                if(450 < System.currentTimeMillis()- tempTime)
-                {
-                    Thread.sleep(100);
-                    tempTime = System.currentTimeMillis();
-                }
-                else
-                {
-                    clients++;
-                    currentClientsAmount.am--;
+
+                    synchronized (currentClientsAmount)
+                    {
+                        if(currentClientsAmount.am > 0) {
+                            currentClientsAmount.am--;
+                            clients++;
+                        }
+                    }
                     Thread.sleep(perClientTime);
-                }
+
             }
         }
         catch(InterruptedException e)
@@ -42,7 +40,7 @@ public class ticketWindow extends Thread
             System.out.println("Thread has been interrupted");
         }
         whole_time -= System.currentTimeMillis();
-        System.out.printf(Thread.currentThread().getName()+" обслужил " + clients +" клиентов. Время: " + Math.abs(whole_time));
+        System.out.printf(Thread.currentThread().getName()+" выдал талоны " + clients +" пациентам. Время: " + Math.abs(whole_time));
         System.out.printf(", %s закончил работу... \n", Thread.currentThread().getName());
     }
 }

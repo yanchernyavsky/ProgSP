@@ -7,14 +7,13 @@ public class main
 {
     public static void main(String[] args) throws IOException
     {
-        Queue am  = new Queue(250);
-        ticketWindow firstCashier = new ticketWindow("Первый кассир", 200, am);
-        ticketWindow secondCashier = new ticketWindow("Второй кассир", 250, am);
-        ticketWindow thirdCashier = new ticketWindow("Третий кассир", 280, am);
+        Queue am  = new Queue(100);
+        ticketWindow firstCashier = new ticketWindow("Первый врач", 200, am);
+        ticketWindow secondCashier = new ticketWindow("Второй врач", 150, am);
 
         firstCashier.start();
         secondCashier.start();
-        thirdCashier.start();
+        System.out.printf("Общее количество талонов: 100\n");
 
 
 
