@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ece88807-9af3-4400-b767-485ca1d9f9d6" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../Lab2/UDP_Client_Server/out/production/UDP_Client_Server/UDP_Client.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab2/UDP_Client_Server/out/production/UDP_Client_Server/UDP_Client.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab2/UDP_Client_Server/out/production/UDP_Client_Server/UDP_Server.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab2/UDP_Client_Server/out/production/UDP_Client_Server/UDP_Server.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab2/UDP_Client_Server/src/UDP_Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab2/UDP_Client_Server/src/UDP_Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab2/UDP_Client_Server/src/UDP_Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab2/UDP_Client_Server/src/UDP_Server.java" afterDir="false" />
-    </list>
+    <list default="true" id="ece88807-9af3-4400-b767-485ca1d9f9d6" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

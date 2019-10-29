@@ -42,7 +42,7 @@ public class ticketWindow extends Thread
             System.out.println("Thread has been interrupted");
         }
         whole_time -= System.currentTimeMillis();
-        System.out.printf("First cashier served " + clients +" clients. Time: " + Math.abs(whole_time));
-        System.out.printf(", %s finished... \n", Thread.currentThread().getName());
+        System.out.printf(Thread.currentThread().getName()+" обслужил " + clients +" клиентов. Время: " + Math.abs(whole_time));
+        System.out.printf(", %s закончил работу... \n", Thread.currentThread().getName());
     }
 }
