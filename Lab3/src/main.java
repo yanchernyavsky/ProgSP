@@ -14,11 +14,6 @@ public class main
         firstCashier.start();
         secondCashier.start();
         System.out.printf("Общее количество талонов: 100\n");
-
-
-
-
-
         System.in.read();
 
     }
